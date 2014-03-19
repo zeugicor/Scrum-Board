@@ -21,21 +21,3 @@ Die JavaScript Bibliothek **UnderscoreJS** steht sowohl server- als auch clients
 
 ### Production
 **forever start server** im entsprechenden Verzeichnis ausführen.
-
-## Sockets
-Generell sind die Socket Messages der Applikation wiefolgt aufgebaut:
-
-	{
-		"route": "unique.identification.for.type.of.request",
-		"data": {
-			"label": "contains data as object or as array of objects"
-		},
-		"error": true / false
-	}
-
-
-- **register:** Als neuer Benutzer für die Socket Broadcasts registrieren.
-- **chat.messages.index**
-- **chat.messages.show**
-- **chat.messages.create**
-- **users.index**
