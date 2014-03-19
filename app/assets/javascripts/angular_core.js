@@ -1,0 +1,12 @@
+//= require           underscore/underscore
+//= require           moment/moment
+//= require           moment/lang/de
+//= require           angular/angular
+//= require           angular-route/angular-route
+//= require           angular-resource/angular-resource
+//= require           angular-cookies/angular-cookies
+//= require           angular-moment/angular-moment
+//= require           angular-sanitize/angular-sanitize
+//= require           angular-ui-utils/ui-utils
+//= require           angularytics/dist/angularytics
+//= require           angular-emoji-filter/lib/emoji

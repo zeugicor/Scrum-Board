@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "coffee-script": "~1.7.1",
+    "connect-assets": "~3.0.0-beta1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^0.4.0",
+    "express": "3.4.8",
+    "express-load": "~1.1.9",
+    "jade": "*",
+    "less": "^1.7.0",
+    "less-middleware": "*",
+    "mincer": "~0.5.13",
+    "mongoose": "~3.8.8",
+    "mongoose-timestamp": "^0.2.0",
+    "node-uuid": "~1.4.1",
+    "optimist": "~0.6.1",
+    "passport": "^0.2.0",
+    "passport-facebook": "^1.0.3",
+    "passport-local": "^1.0.0",
+    "reload": "^0.1.0",
+    "stylus": "^0.42.3",
+    "underscore": "^1.6.0",
+    "ws": "~0.4.31"
+  },
+  "name": "scrum-board",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "version": "0.0.1"
+}

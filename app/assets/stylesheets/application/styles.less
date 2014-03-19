@@ -1,0 +1,18 @@
+@import "../bootstrap/custom-bootstrap-variables";
+
+body {
+  @media (min-width: @screen-md) {
+    section {
+      padding: 0 50px;
+    }
+  }
+
+  /* Entfernen des Abstandes gegen oben für die ersten Überschriften in .well */
+  .well {
+    h1, h2, h3, h4, h5, h6 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
