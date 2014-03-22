@@ -11,15 +11,5 @@ application.config ($routeProvider) ->
     templateUrl: 'angular/frontend/index.html'
     controller: 'IndexController'
   )
-
-  $routeProvider.when('/tasks',
-    templateUrl: 'angular/frontend/scrum/tasks/index.html'
-    controller: 'ScrumTasksController'
-  )
-
-  $routeProvider.when('/projects',
-    templateUrl: 'angular/frontend/scrum/projects/index.html'
-    controller: 'ScrumProjectsController'
-  )
   
   $routeProvider.otherwise redirectTo: '/'

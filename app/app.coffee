@@ -10,8 +10,6 @@ reload            = require 'reload'
 mongoose          = require 'mongoose'
 Mincer            = require 'mincer'
 less              = require 'less'
-passport          = require 'passport'
-MongoStore        = require('connect-mongo')(express)
 flash             = require 'connect-flash'
 
 ###
@@ -31,7 +29,6 @@ server = http.createServer app
 
 app.configure ->
   app.set 'root', __dirname
-  app.set 'mongoDb', 'mongodb://ple.bli.ch/scrum_board_development'
   app.set 'mongoDbServer', 'ple.bli.ch'
   app.set 'mongoDbDatabase', 'scrum_board_development'
   app.set 'port', 8080
@@ -50,18 +47,6 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use express.cookieParser()
-  # Session store
-  app.use express.session(
-    secret: 'NodeScrumBoardApp'
-    store: new MongoStore(
-      db:     app.get 'mongoDbDatabase'
-      host:   app.get 'mongoDbServer'
-    )
-  )
-
-  # Passport
-  app.use passport.initialize()
-  app.use passport.session()
 
   app.use app.router
 
@@ -95,11 +80,6 @@ load('middelware')
   .then('routes')
   .into app
 
-
-###
-  Socket
-###
-require('./sockets/sockets')( app, server )
 
 ###
 # MongoDB Connection
