@@ -11,5 +11,10 @@ application.config ($routeProvider) ->
     templateUrl: 'angular/frontend/index.html'
     controller: 'IndexController'
   )
+
+  $routeProvider.when('/tasks',
+    templateUrl: 'angular/frontend/tasks.html'
+    controller: 'TasksController'
+  )
   
   $routeProvider.otherwise redirectTo: '/'

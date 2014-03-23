@@ -30,8 +30,8 @@ server = http.createServer app
 app.configure ->
   app.set 'root', __dirname
   app.set 'mongoDbServer', 'ple.bli.ch'
-  app.set 'mongoDbDatabase', 'scrum_board_development'
-  app.set 'port', 8080
+  app.set 'mongoDbDatabase', 'scrum_board_cze'
+  app.set 'port', 3333
 
 
   # Template engine
@@ -85,6 +85,7 @@ load('middelware')
 # MongoDB Connection
 ###
 mongoose.connect("mongodb://#{app.get 'mongoDbServer'}/#{app.get 'mongoDbDatabase'}" )
+mongoose.set("debug",true)
 
 
 
