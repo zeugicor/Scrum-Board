@@ -2,20 +2,25 @@
   <form role="form" ng-submit="create()">
     <div class="form-group">
       <label for="exampleTitle">Titel</label>
-      <input type="text" class="form-control" ng-model="currentTask.label" id="exampleTitel" placeholder="Bitte erfassen Sie einen Titel für den Task" />
+      <input type="text" class="form-control" autoFocus="true" ng-model="currentTask.label" id="exampleTitel" required placeholder="Bitte erfassen Sie einen Titel für den Task" />
     </div>
     <div class="form-group">
       <label for="exampleText">Text</label>
-      <textarea class="form-control" rows="3" ng-model="currentTask.text" id="exampleText" placeholder="Bitte einen Text erfassen"></textarea>
+      <textarea class="form-control" rows="3" ng-model="currentTask.text" id="exampleText" required placeholder="Bitte einen Text erfassen"></textarea>
     </div>
     <div class="form-group">
       <label for="exampleEstimate">Mitarbeiter</label>
-      <input type="text" class="form-control" ng-model="currentTask.employee" id="exampleEmployee" placeholder="Bitte erfassen Sie den zuständigen Mitarbeiter" />
+      <input type="text" class="form-control" ng-model="currentTask.employee" id="exampleEmployee" required placeholder="Bitte erfassen Sie den zuständigen Mitarbeiter" />
     </div>
     <div class="form-group">
       <label for="exampleEstimate">Aufwandschätzung</label>
-      <input type="number" class="form-control" ng-model="currentTask.effort" id="exampleEstimate" placeholder="Bitte erfassen Sie eine Aufwandschätzung für den Task" />
-    </div>
+        <select class="form-control" ng-model="currentTask.effort" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="5">4</option>
+          <option value="8">5</option>
+        </select>
     <button type="submit" class="btn btn-default">Speichern</button>
   </form>
 </div>
