@@ -1,10 +1,3 @@
-###
-  @desc       Nachdem die Navigation betätigt wurde, soll diese
-              auch geschlossen werden.
-  @date       2014-03-19
-  @author     Patrick Lehmann <lehmann@bl-informatik.ch>
-###
-
 # Ausbleden der Navigation für Mobile, bei Klick auf einen Navigationspunkt
 $('ul.nav > li > a:not(.dropdown-toggle)').click ->
   if $('nav .navbar-collapse').hasClass('in')

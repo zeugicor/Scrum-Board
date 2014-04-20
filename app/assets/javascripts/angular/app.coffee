@@ -1,8 +1,6 @@
 'use strict'
 ###
   @desc     Initialisieren der Applikation ScrubBoardApp
-
-  @author   Patrick Lehmann <lehmann@bl-informatik.ch>
   @date     2014-03-14
   @params   ngCookies:        Support von Cookies
   @params   ngResource:       Standartisierte RESTful Abfragen
