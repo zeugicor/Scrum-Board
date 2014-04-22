@@ -97,6 +97,35 @@ Kann kein Task gefunden werden, so wird ein 404 retourniert.
                 
       )
 
+    ###
+@name move
+@desc Bewegen des Tasks nach rechts
+###
+    @translate = ( req, res ) ->
+      # Entfernen der Attribute, welche durch Module / Datenbank gesetzt werden
+      req.body = _.omit(req.body, '_id')
+      req.body = _.omit(req.body, 'id')
+      req.body = _.omit(req.body, 'createdAt')
+      req.body = _.omit(req.body, 'updatedAt')
+
+      ScrumTask.findOne( _id: req.params.id )
+      .exec(
+        ( err, task ) ->
+          if not err
+            task = _.extend(task, req.body)
+            task.save ( err ) ->
+              if not err
+                res.redirect "/api/scrum/tasks/#{req.params.id}"
+              else
+                console.log err
+                res.status 500
+                res.json err
+          else
+            res.status 404
+                
+      )
+
+
 
     ###
 @name destroy

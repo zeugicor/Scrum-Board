@@ -5,15 +5,24 @@
 
   <div class="row">
     <div class="col-md-4">
-      <h2>To Do</h2>
+      <h2>
+        To Do
+        <small>{{tasksToDo.length}}</small>
+      </h2>
       <div ng-repeat="task in tasksToDo" ng-include="'angular/frontend/tasks/_task.html'"></div>
     </div>
     <div class="col-md-4">
-      <h2>In Progress</h2>
+      <h2>
+        In Progress
+        <small>{{tasksInProgress.length}}</small>
+      </h2>
       <div ng-repeat="task in tasksInProgress" ng-include="'angular/frontend/tasks/_task.html'"></div>
     </div>
     <div class="col-md-4">
-      <h2>Done</h2>
+      <h2>
+        Done
+        <small>{{tasksDone.length}}</small>
+      </h2>
       <div ng-repeat="task in tasksDone" ng-include="'angular/frontend/tasks/_task.html'"></div>
     </div>
   </div>
